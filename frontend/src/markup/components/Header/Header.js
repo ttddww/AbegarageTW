@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import logo from "../../../assets/images/g3logo.png";
+import logo from "../../../assets/images/teklogo.png";
 import loginService from "../../../services/login.service";
 import { useAuth } from "../../../Contexts/AuthContext";
 import MenuIcon from "@mui/icons-material/Menu";

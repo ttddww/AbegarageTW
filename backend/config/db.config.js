@@ -1,6 +1,7 @@
 // Import the mysql2 module Promise Wrapper
 const mysql = require("mysql2/promise");
 // Prepare connection parameters we use to connect to the database
+const fs = require("fs");
 const dbConfig = {
   // port: 8889,
   port: 3306,
@@ -11,6 +12,9 @@ const dbConfig = {
   host: process.env.DB_HOST,
   database: process.env.DB_NAME,
   namedPlaceholders: true,
+  ssl: {
+    ca: fs.readFileSync("./isrgrootx1.pem"),
+  },
 };
 // Create the connection pool
 const pool = mysql.createPool(dbConfig);
